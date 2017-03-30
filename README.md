@@ -1,61 +1,29 @@
-![alt tag](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
-===========
+Enable Search by item by extracting item from images of menu cards
 
-[![Travis CI](https://travis-ci.org/Dogfalo/materialize.svg?branch=master)](https://travis-ci.org/Dogfalo/materialize)[![devDependency Status](https://david-dm.org/Dogfalo/materialize/dev-status.svg)](https://david-dm.org/Dogfalo/materialize#info=devDependencies)[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Problem : Today, there are a multitude of restaurants, food delivery companies and cafes
+serving a wide variety of dishes that customers can choose from.So, most people use websites
+like Zomato to decide where and what they want to eat. Currently, food ordering websites like
+Zomato allow users to search for food outlets in a particular location,of a particular price range,
+cuisine, category(delivery or dine in) etc.However, they do not allow users to find restaurants
+which serve a particular dish that they would like to try out ; that is they do not support search by
+food item.
 
-[Materialize](http://materializecss.com/), a CSS Framework based on material design
+Proposed Solution : Currently, Zomato displays information about restaurants along with their
+respective menus for users to look at. The menus are available on the website as images only. So,
+a useful extension to the website would be to provide an option for searching for restaurants by
+item/dish name.Using this feature, if a user feels like eating pizza, then they can search for
+“pizza” and find the best places that serve pizza in their location.
 
-### Current Version : v0.98.0
+Tools and Technologies : In order to incorporate this functionality into the existing website, we
+wish to develop a module that will directly extract items names from the menus(text extraction
+from an image using technologies like OCR).This text can then be used as data to implement
+search based on a particular dish.
+We will be building a website along the lines of zomato to demonstrate our improvement.The
+website will be built using HTML,Bootstrap and JavaScript on the front end and PHP and
+MySQL on the back end.
 
-## Sass Requirements:
-- Ruby Sass 3.3+, LibSass 0.6+
-
-## Supported Browsers:
-Chrome 35+, Firefox 31+, Safari 7+, IE 10+
-
-## Changelog
-Bolded styling surrounded by emojis indicates a breaking change.
-
-- v0.98.0 (January 25th)
-  - :no_good: **Standardized plugin option naming to camelcase (please check your plugin calls to make sure all the options are camelcase)** :no_good:
-  - Added FABs in image cards
-  - Added swipeable tabs
-  - Fixed carousel misalignment when switching quickly
-  - Fixed carousel resize bug where slide widths wouldn't change when changing window size
-  - Improved tabs compatibility with cards
-  - Fixed bug where using backspace to delete chips would navigate back in certain browsers
-  - Added autocomplete integration with chips
-  - Upgraded noUiSlider to version 9 with support for vertical sliders
-
-- v0.97.8 (October 30th, 2016)
-  - **Refactored Modal plugin**
-  - Tabs now supported in navbar
-  - Chips data can now be reinitiailized
-  - Minor side nav fixes
-  - FAB to toolbar component added
-  - Fixed dropdown options bug
-- v0.97.7 (July 23rd, 2016)
-  - Basic horizontal cards
-  - Carousel bug fixes and new features
-  - Updated sidenav styles and new component
-  - Meteor package now supports Sass
-  - Autocomplete form component
-  - Chips jQuery plugin
-- v0.97.6 (April 1st, 2016)
-  - **Removed deprecated material icons from project**
-  - **Changed /font directory to /fonts**
-  - Datepicker and ScrollSpy now compatible with jQuery 2.2.x
-  - Responsive tables now work with empty cells
-  - Added focus states to checkboxes, switches, and radio buttons
-  - Sidenav and Modals no longer cause flicker with scrollbar
-  - Materialbox overflow and z-index issues fixed
-  - Added new option for Card actions within a Card reveal
-
-
-
-
-## Contributing
-[Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
-
-## Testing
-We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](https://docs.google.com/document/d/1dVM6qGt_b_y9RRhr9X7oZfFydaJIEqB9CT7yekv-4XE/edit?usp=sharing)
+Features :
+1. The added feature will allow users to find a more appropriate place to satisfy their
+craving.
+2. If the menu cards can be analysed as text instead of images, then users can also easily
+search menus of restaurants to see if the restaurant has the item on their mind.
