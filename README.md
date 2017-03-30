@@ -1,4 +1,4 @@
-Enable Search by item by extracting item from images of menu cards
+#**Enable Search by item by extracting item from images of menu cards**
 
 Problem : Today, there are a multitude of restaurants, food delivery companies and cafes
 serving a wide variety of dishes that customers can choose from.So, most people use websites
